@@ -6,6 +6,8 @@ https://docs.google.com/spreadsheets/d/1EENS686TRwJP1z63-aHrGJq5cPGUUU2lck-BX_65
 updated manually
 
 ## Sample outcome
+
+```
 [8, 12, 24, 32, 35, 44]
         ID  Price  Dollar
 0   20/009    3.0      40
@@ -59,3 +61,6 @@ You earn: 1480
 21  16/054    3.0      40
 22  16/036    3.0      40
 You earn: 1480
+```
+
+Code: https://colab.research.google.com/drive/1uWxrZ-mxprjeERfoLaBBOW6iMuGe8gnx?usp=sharing
