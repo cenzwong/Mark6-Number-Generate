@@ -59,32 +59,6 @@ mySix = [4,	8,	15,	18,	30,	45]
 
 getHistoryBingo(mySix,df_six_history)
 
-"""# prepare tg bot"""
-
-import requests
-import base64
-
-# API_TOKEN = base64.b64decode(b"MTIxNjM1NTk0MDpBQUhVUXhtaWlkRlFvMnhlNUVrOFhFeUVFTHFSb1pSRXNjNA==cenz").decode("utf-8")  # replace your Bot Token
-
-HTTP_URL = 'https://api.telegram.org/bot'
-API_getMe = '/getMe'
-API_getUpdates = '/getUpdates'
-API_sendMessage = '/sendMessage'
-
-def telegram_request(str_API_TOKEN, str_API_getMe, dict_payload, dict_headers):
-  r = requests.post(HTTP_URL + str_API_TOKEN + str_API_getMe, params=dict_payload, headers=dict_headers)
-  return r.json()
-
-
-myText = str("hi")
-payload = {
-    'chat_id': '@czglobalmarket',
-    'text': myText,
-    'parse_mode':'HTML'
-}
-
-telegram_request(API_TOKEN, API_sendMessage, payload, {})
-
 """# Random generate number and return best number"""
 
 import random
@@ -123,14 +97,6 @@ for i in range(10000000):
     print(df_result)
     print("You earn:", df_result.Dollar.sum())
     print("========================================")
-    # # backup to tg
-    # myText = "Currently trial: " + str(i) +"\r\n"+ str(myRand) +"\r\n"+ df_result.to_string() +"\r\n"+ "Total Earn: " + str(df_result.Dollar.sum()) +"\r\n"+ "======"
-    # payload = {
-    #     'chat_id': '@czglobalmarket',
-    #     'text': myText,
-    #     'parse_mode':'HTML'
-    # }
-    # telegram_request(API_TOKEN, API_sendMessage, payload, {})
 
 """# buy the last bingo number and find how many time can bingo
 
